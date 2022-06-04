@@ -17,4 +17,5 @@ RUN rm -r doxygen
 
 COPY codegen/ /codegen/
 RUN cd /codegen
-RUN python3 ./setup.py install
+RUN ls
+RUN python3 setup.py install
