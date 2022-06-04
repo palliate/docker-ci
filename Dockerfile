@@ -1,6 +1,8 @@
 FROM ubuntu:latest
-ENV DOXYGEN_VERSION="1.9.4"
 
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/Berlin
+ENV DOXYGEN_VERSION="1.9.4"
 
 RUN apt update
 RUN apt install -y wget build-essential cmake capnproto libcapnp-dev pkg-config libsystemd-dev python3 python3-toml python3-git python3-click python3-jinja2 xorg-dev libgtk-3-dev libappindicator3-dev graphviz
