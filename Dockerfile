@@ -15,6 +15,6 @@ RUN make -C doxygen-${DOXYGEN_VERSION} install
 RUN cd .. 
 RUN rm -r doxygen
 
-ADD codegen /tmp/codegen/
+COPY codegen/ /tmp/codegen/
 RUN cd /tmp/codegen
 RUN python3 setup.py install
